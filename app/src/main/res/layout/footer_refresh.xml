@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_refresh_footer"
+        style="@style/TextAppearance.AppCompat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="加载更多"
+        android:textSize="18sp" />
+
+    <ProgressBar
+        android:id="@+id/pb_refresh_footer"
+        style="@style/Base.Widget.AppCompat.ProgressBar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@id/tv_refresh_footer" />
+
+    <Button
+        android:id="@+id/btn_refresh_retry"
+        style="@style/Base.Widget.AppCompat.ActionButton.Overflow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:text="加载失败，点击重试"
+        android:visibility="invisible"
+        android:textSize="18sp" />
+</RelativeLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_app_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.liuhaoyuan.mygoogleplay.activity.AppDetailActivity">
+
+    <ProgressBar
+        android:id="@+id/pb_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/ll_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_error_page" />
+
+        <Button
+            android:id="@+id/btn_retry_detail"
+            style="@style/Base.Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="加载失败,点击重试"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_success"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_app_icon_detail"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/tv_app_name_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/iv_app_icon_detail"
+                    android:text="AppName"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp" />
+
+                <RatingBar
+                    android:id="@+id/rb_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_alignLeft="@id/tv_app_name_detail"
+                    android:layout_below="@id/tv_app_name_detail"
+                    android:layout_marginTop="5dp"
+                    android:progressDrawable="@drawable/custom_ratingbar" />
+
+                <TextView
+                    android:id="@+id/tv_download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_app_icon_detail"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="download"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_app_icon_detail"
+                    android:layout_marginLeft="150dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/tv_download"
+                    android:text="version"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/tv_download"
+                    android:layout_below="@id/tv_download"
+                    android:layout_marginTop="5dp"
+                    android:text="date"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_app_size_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/tv_version"
+                    android:layout_below="@id/tv_version"
+                    android:layout_marginTop="5dp"
+                    android:text="size"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <include layout="@layout/layout_detail_safeinfo" />
+
+            <include layout="@layout/layout_detail_picinfo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="应用描述"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_des_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="des"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/layout_detail_download" />
+    </LinearLayout>
+</RelativeLayout>

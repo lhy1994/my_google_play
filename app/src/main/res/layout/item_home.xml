@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selecter_list_item_bg"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_app_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_app_icon"
+            android:text="appName"
+            android:textSize="18sp" />
+
+        <android.support.v7.widget.AppCompatRatingBar
+            android:id="@+id/rb_app"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_below="@id/tv_app_name"
+            android:layout_marginLeft="10dp"
+            android:isIndicator="true"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/iv_app_icon"
+            android:progressDrawable="@drawable/custom_ratingbar"
+            android:rating="4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rb_app"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/tv_app_size"
+            android:layout_toRightOf="@id/iv_app_icon"
+            android:text="size" />
+
+        <Button
+            android:id="@+id/btn_download"
+            style="@style/Base.Widget.AppCompat.ActionButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/action_download"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/btn_download"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_alignLeft="@id/btn_download"
+            android:text="下载"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textSize="12sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:layout_below="@id/tv_app_size"
+            android:layout_marginTop="5dp"
+            android:id="@+id/divider"
+            android:background="@android:color/darker_gray"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="des"
+            android:layout_below="@id/divider"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:lines="1"
+            android:ellipsize="end"
+            android:id="@+id/tv_app_des"
+            />
+    </RelativeLayout>
+</LinearLayout>
